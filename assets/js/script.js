@@ -20,10 +20,14 @@
 var currentTime = moment();
 let currentTimeEl = document.createElement('p');
 let containerEl = document.createElement('div');
-// how to append to the div class container 
-body.appendChild(containerEl);
+
+document.body.appendChild(containerEl);
 containerEl.appendChild(currentTimeEl);
 currentTimeEl.textContent = currentTime.format('MMM DD, YYYY')
 
 
+
+// var testEl = $('.lead').click(function(){
+    
+// })
 
