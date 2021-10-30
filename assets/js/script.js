@@ -21,7 +21,7 @@ var currentTime = moment();
 let currentTimeEl = document.createElement('p');
 let containerEl = document.createElement('div');
 
-document.body.appendChild(containerEl);
+document.body.append(containerEl);
 containerEl.appendChild(currentTimeEl);
 currentTimeEl.textContent = currentTime.format('MMM DD, YYYY')
 
