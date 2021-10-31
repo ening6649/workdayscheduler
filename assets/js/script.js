@@ -17,13 +17,17 @@
 // var pastDate = moment("12-01-1999", "MM-DD-YYYY").format("dddd, MM/DD/YY");
 // console.log(pastDate);
 
+
+var currentDayEl = document.querySelector('#currentDay');
 var currentTime = moment();
 let currentTimeEl = document.createElement('p');
 let containerEl = document.createElement('div');
-
-document.body.append(containerEl);
-containerEl.appendChild(currentTimeEl);
 currentTimeEl.textContent = currentTime.format('MMM DD, YYYY')
+currentDayEl.appendChild(containerEl);
+containerEl.appendChild(currentTimeEl);
+
+
+
 
 
 
