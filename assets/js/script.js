@@ -36,7 +36,7 @@ var loadTasks = function() {
     }
 }
 
-loadTasks();
+
 
 var MomentCheck = function() {
     var time= moment().hour();
@@ -62,4 +62,4 @@ MomentCheck();
 
 formContentEl.addEventListener('click',updateTask)
 
-
+loadTasks()
