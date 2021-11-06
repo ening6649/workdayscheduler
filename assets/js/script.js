@@ -1,6 +1,7 @@
 
 var formContentEl = document.querySelector('#column')
 var taskDataEl = document.querySelectorAll('.textarea')
+
 // console.log(taskDataEl)
 
 // taskDataEl.forEach(textarea => {
@@ -19,10 +20,9 @@ containerEl.appendChild(currentTimeEl);
 
 var updateTask= function(event) {
     event.preventDefault();   
-   var savedTasksArr = []
+    let savedTasksArr = []
     for (var i=0;i<taskDataEl.length; i++) {
         savedTasksArr.push(taskDataEl[i].value);
-        
     }
     localStorage.setItem("tasks", JSON.stringify(savedTasksArr));
 }
@@ -30,8 +30,11 @@ var updateTask= function(event) {
 
 var loadTasks = function() {
     var savedTasks = JSON.parse(localStorage.getItem("tasks"));
-    
+    if (!savedTasks) {
+        return false;
+    }
     for (let i = 0; i < taskDataEl.length; i++) {
+        
         taskDataEl[i].value = savedTasks[i];
     }
 }
